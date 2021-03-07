@@ -47,7 +47,7 @@ struct Provider: TimelineProvider {
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         networkManager.getWeatherData { data in
-            let timeline = Timeline(entries: [SimpleEntry(date: Date(), data: data ?? .error, error: data == nil)], policy: .after(Calendar.current.date(byAdding: .second, value: 10, to: Date())!))
+            let timeline = Timeline(entries: [SimpleEntry(date: Date(), data: data ?? .error, error: data == nil)], policy: .after(Calendar.current.date(byAdding: .minute, value: 5, to: Date())!))
             completion(timeline)
         }
     }
