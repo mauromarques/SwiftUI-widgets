@@ -13,6 +13,11 @@
 		675CF73525F5302400B16985 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 675CF73425F5302400B16985 /* Preview Assets.xcassets */; };
 		675CF74025F5302400B16985 /* BTC_widgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675CF73F25F5302400B16985 /* BTC_widgetTests.swift */; };
 		675CF74B25F5302400B16985 /* BTC_widgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675CF74A25F5302400B16985 /* BTC_widgetUITests.swift */; };
+		675CF76225F530A300B16985 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 675CF76125F530A300B16985 /* WidgetKit.framework */; };
+		675CF76425F530A300B16985 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 675CF76325F530A300B16985 /* SwiftUI.framework */; };
+		675CF76725F530A300B16985 /* BTC_app_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675CF76625F530A300B16985 /* BTC_app_widget.swift */; };
+		675CF76925F530A500B16985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 675CF76825F530A500B16985 /* Assets.xcassets */; };
+		675CF76D25F530A500B16985 /* BTC app widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 675CF75F25F530A300B16985 /* BTC app widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +35,28 @@
 			remoteGlobalIDString = 675CF72925F5302100B16985;
 			remoteInfo = "BTC widget";
 		};
+		675CF76B25F530A500B16985 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 675CF72225F5302100B16985 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 675CF75E25F530A300B16985;
+			remoteInfo = "BTC app widgetExtension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		675CF77125F530A500B16985 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				675CF76D25F530A500B16985 /* BTC app widgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		675CF72A25F5302100B16985 /* BTC widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BTC widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +71,12 @@
 		675CF74625F5302400B16985 /* BTC widgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BTC widgetUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		675CF74A25F5302400B16985 /* BTC_widgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTC_widgetUITests.swift; sourceTree = "<group>"; };
 		675CF74C25F5302400B16985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		675CF75F25F530A300B16985 /* BTC app widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BTC app widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		675CF76125F530A300B16985 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		675CF76325F530A300B16985 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		675CF76625F530A300B16985 /* BTC_app_widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTC_app_widget.swift; sourceTree = "<group>"; };
+		675CF76825F530A500B16985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		675CF76A25F530A500B16985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +101,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		675CF75C25F530A300B16985 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				675CF76425F530A300B16985 /* SwiftUI.framework in Frameworks */,
+				675CF76225F530A300B16985 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,8 +117,10 @@
 			isa = PBXGroup;
 			children = (
 				675CF72C25F5302100B16985 /* BTC widget */,
+				675CF76525F530A300B16985 /* BTC app widget */,
 				675CF73E25F5302400B16985 /* BTC widgetTests */,
 				675CF74925F5302400B16985 /* BTC widgetUITests */,
+				675CF76025F530A300B16985 /* Frameworks */,
 				675CF72B25F5302100B16985 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +131,7 @@
 				675CF72A25F5302100B16985 /* BTC widget.app */,
 				675CF73B25F5302400B16985 /* BTC widgetTests.xctest */,
 				675CF74625F5302400B16985 /* BTC widgetUITests.xctest */,
+				675CF75F25F530A300B16985 /* BTC app widgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +174,25 @@
 			path = "BTC widgetUITests";
 			sourceTree = "<group>";
 		};
+		675CF76025F530A300B16985 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				675CF76125F530A300B16985 /* WidgetKit.framework */,
+				675CF76325F530A300B16985 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		675CF76525F530A300B16985 /* BTC app widget */ = {
+			isa = PBXGroup;
+			children = (
+				675CF76625F530A300B16985 /* BTC_app_widget.swift */,
+				675CF76825F530A500B16985 /* Assets.xcassets */,
+				675CF76A25F530A500B16985 /* Info.plist */,
+			);
+			path = "BTC app widget";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,10 +203,12 @@
 				675CF72625F5302100B16985 /* Sources */,
 				675CF72725F5302100B16985 /* Frameworks */,
 				675CF72825F5302100B16985 /* Resources */,
+				675CF77125F530A500B16985 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				675CF76C25F530A500B16985 /* PBXTargetDependency */,
 			);
 			name = "BTC widget";
 			productName = "BTC widget";
@@ -186,6 +251,23 @@
 			productReference = 675CF74625F5302400B16985 /* BTC widgetUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		675CF75E25F530A300B16985 /* BTC app widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 675CF76E25F530A500B16985 /* Build configuration list for PBXNativeTarget "BTC app widgetExtension" */;
+			buildPhases = (
+				675CF75B25F530A300B16985 /* Sources */,
+				675CF75C25F530A300B16985 /* Frameworks */,
+				675CF75D25F530A300B16985 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BTC app widgetExtension";
+			productName = "BTC app widgetExtension";
+			productReference = 675CF75F25F530A300B16985 /* BTC app widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -206,6 +288,9 @@
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 675CF72925F5302100B16985;
 					};
+					675CF75E25F530A300B16985 = {
+						CreatedOnToolsVersion = 12.4;
+					};
 				};
 			};
 			buildConfigurationList = 675CF72525F5302100B16985 /* Build configuration list for PBXProject "BTC widget" */;
@@ -224,6 +309,7 @@
 				675CF72925F5302100B16985 /* BTC widget */,
 				675CF73A25F5302400B16985 /* BTC widgetTests */,
 				675CF74525F5302400B16985 /* BTC widgetUITests */,
+				675CF75E25F530A300B16985 /* BTC app widgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +335,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		675CF75D25F530A300B16985 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				675CF76925F530A500B16985 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +374,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		675CF75B25F530A300B16985 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				675CF76725F530A300B16985 /* BTC_app_widget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -292,6 +394,11 @@
 			isa = PBXTargetDependency;
 			target = 675CF72925F5302100B16985 /* BTC widget */;
 			targetProxy = 675CF74725F5302400B16985 /* PBXContainerItemProxy */;
+		};
+		675CF76C25F530A500B16985 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 675CF75E25F530A300B16985 /* BTC app widgetExtension */;
+			targetProxy = 675CF76B25F530A500B16985 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -415,6 +522,7 @@
 		675CF75025F5302400B16985 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -437,6 +545,7 @@
 		675CF75125F5302400B16985 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -540,6 +649,48 @@
 			};
 			name = Release;
 		};
+		675CF76F25F530A500B16985 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CPYT3A73TA;
+				INFOPLIST_FILE = "BTC app widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mauro.BTC-widget.BTC-app-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		675CF77025F530A500B16985 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CPYT3A73TA;
+				INFOPLIST_FILE = "BTC app widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mauro.BTC-widget.BTC-app-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -575,6 +726,15 @@
 			buildConfigurations = (
 				675CF75625F5302400B16985 /* Debug */,
 				675CF75725F5302400B16985 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		675CF76E25F530A500B16985 /* Build configuration list for PBXNativeTarget "BTC app widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				675CF76F25F530A500B16985 /* Debug */,
+				675CF77025F530A500B16985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
