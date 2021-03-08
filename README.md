@@ -1,8 +1,10 @@
 # SwiftUI-widgets
 Widgets made with SwiftUI that pull data from an API
 # Demo
-#Light Mode \n
+#Light Mode
+
 ![](light.png)
 #Dark Mode
+
 ![](dark.png)
 
